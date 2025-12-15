@@ -1,10 +1,8 @@
 // import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
-import './App.css'
-import DashboardComponent from './DashboardComponent.jsx'
-import NewComponent from './NewComponent.jsx'
-import JSXBasics from './JSXBasics.jsx'
+// import './App.css'
+
 // function App() {
 //   const [count, setCount] = useState(0)
 
@@ -36,15 +34,24 @@ import JSXBasics from './JSXBasics.jsx'
 
 // export default App
 
-function App(){
+import './App.css'
+import CounterUI from './ReduxPractical/CounterUI'
+import TodoUI from './ReduxPracticalTodo/TodoUI'
+// function App(){
+//         return(
+//           <div>
+//             <h1>Hello, I am studying React</h1>
+//           </div>
+//         )
+// }
+
+// export default App
+
+export const App = () =>{
+
   return(
     <div>
-      <h1>Hello Vite + React!</h1>
-      <DashboardComponent />
-      <NewComponent />
-      <JSXBasics />
+      <TodoUI />
     </div>
   )
 }
-
-export default App

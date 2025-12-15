@@ -1,32 +1,43 @@
+
 import React from 'react'
 import Home from './Home'
-import About from './About'
 import Contact from './Contact'
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
-import DataFIle from './DataFIle'
+import About from './About'
+import { BrowserRouter, Routes, Route , Link, useNavigate } from 'react-router-dom'
+import DataFile from './DataFile'
 
 const ParentRouting = () => {
 
   const aboutData = {
-    compName: "Infosys",
-    Locationcomp: "Bangalore",
-    Work: "Full Stack"
+    compName:"Infosys",
+    locationComp: "Banglore",
+    work: "Full Stack"
+  }
+
+  const NavigatePage = () =>{
+    const navigate = useNavigate();
+    return(
+      <div>
+        <button onClick={()=>navigate(-1)}>Previous</button>
+        <button onClick={()=>navigate(1)}>Next</button>
+      </div>
+    )
+
   }
   return (
     <div>
         <BrowserRouter>
-        <div><Link to='/home'>Home</Link></div>
-        <div><Link to='/datafile?name=Harsh&regno=12318384'>Data</Link></div>
-        <div><Link to='/about' name={{compName:"Infosys"}}>About</Link></div>
-        <div><Link to='/contact'>Contact</Link></div>
-
+        <div><Link to="/">Home</Link></div>
+        <div><Link to="/datafile?name=Harsh&regnno=1234567">Data</Link></div>
+        <div><Link to="/abouttttt" state={aboutData}>About</Link></div>
+        <div><Link to="/contact?id=4">Contact</Link></div>
+        {<NavigatePage/>}
         <Routes>
-            <Route path='/home' element={<Home/>} />
-            <Route path='/datafile' element={<DataFIle/>} />
-            <Route path='/about' element={<About/>} />
-            <Route path='/contact' element={<Contact/>} />
+            <Route path ="/" element={<Home/>}/>
+            <Route path ="/datafile" element={<DataFile/>}/>
+            <Route path ="/abouttttt" element={<About/>}/>
+            <Route path ="/contact" element={<Contact/>}/>
         </Routes>
-
         </BrowserRouter>
     </div>
   )

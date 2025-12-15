@@ -1,14 +1,19 @@
+
+
 import React from 'react'
 
-const DataFIle = () => {
+const DataFile = () => {
+
+    const queryparam = new URLSearchParams(window.location.search);
+    const name = queryparam.get('name');
+    const regnno = queryparam.get('regnno');
   return (
     <div>
-      const queryparam = new URLSearchParams(window.location.search);
-      const name = queryparam.get('name');
-      const regno = queryparam
+      <p>This is Data file</p>
+      <p>Name : {name}</p>
+      <p>Regn No: {regnno}</p>
     </div>
   )
 }
 
-export default DataFIle
-
+export default DataFile

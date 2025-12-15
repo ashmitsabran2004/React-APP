@@ -1,13 +1,12 @@
-function LaptopFunction(props) {
-    return (
+
+
+function LaptopFunction(props){
+    return(
         <div>
-            <h1>This is Laptop Function Components</h1>
-            <p>The brand of the laptop is {props.brand} and color is {props.color}</p>
-            <p>The laptop is manufactured in year {props.year}and the model number is {props.model}</p>
-            <p>The specs is : Ram : {props.config.ram}</p>
-            <p>
-                The version is : {props.ver[0]}, {props.ver[1]}, {props.ver[2]}
-            </p>
+            <h1>This is laptop function component</h1>
+            <p>The color of laptop is {props.color} and the brand is {props.brand}</p>
+            <p>The laptop is manufactured in year {props.year}. the model no. is {props.model}</p>
+            <p>The specs are : ram {props.con.ram} and ssd {props.con.ssd}</p>
         </div>
     )
 }

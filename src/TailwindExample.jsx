@@ -1,14 +1,16 @@
+
+
 import React from 'react'
-import './Tailwindcss.css'
-const TailwindExample = () => {
+import './Tailwindsty.css'
+
+
+function TailwindExample(){
   return (
-    <div className = 'flex items-center justify-between bg-red-900 p-6 m-4 rounded-lg shadow-lg'>
-        <div>
-        <h2 className = 'text-5xl border-2-solid'>This is our tailwind</h2>
-        </div>
+    <div className='border-solid border-8 border-red-700 text-4xl'>
+      <h2 className='text-5xl text-blue-500' >This is our tailwind example</h2>
+      <h3 className = "text-4xl">Hello</h3>
     </div>
   )
 }
 
 export default TailwindExample
-

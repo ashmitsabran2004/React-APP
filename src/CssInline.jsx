@@ -1,16 +1,23 @@
+
+import './CSSExternal.css'
+import './CSSExternal1.css'
 const myStyle = {
-  color: 'blue',
-  backgroundColor: 'lightgray',
-  border: '2px solid black',
-  borderRadius: '5px',
+    color:"blue",
+    backgroundColor : "yellowgreen",
+    border : "2px solid red",
+    borderRadius : "10px"
 }
 
-function CssInline() {
-  return (
-    <div style={myStyle}>
-      <h1>This is my Inline CSS example.</h1>
-    </div>
-  )
-}
 
-export default CssInline
+function CSSInline(){
+    return(
+        // <div style={myStyle}>
+        //     <h1>This is Inline CSS Example</h1>
+        // </div>
+
+        <div className="container">
+            <h2>This is new style</h2>
+        </div>
+    )
+}
+export default CSSInline;

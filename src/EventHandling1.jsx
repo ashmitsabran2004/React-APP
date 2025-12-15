@@ -1,14 +1,24 @@
-import React from 'react';
-class EventHandling1 extends React.Component {
-    newfun(){
-        alert("OK");
+
+import React from "react";
+class EventHandling1 extends React.Component{
+
+    // newFun(){
+
+    //     alert("OK")
+
+    // }
+
+    newFun = () =>{
+        alert ("OK");
     }
 
     render(){
-        <div>
-            <h2>This is the Event..</h2>
-            <button onClick={this.newfun}>Click</button>
-        </div>
+        return(
+            <div>
+                <h1>Event Handling Class Component</h1>
+                <button onClick={this.newFun}>Click</button>
+            </div>
+        )
     }
 }
-export default EventHandling1;
+export default EventHandling1

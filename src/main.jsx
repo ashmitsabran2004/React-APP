@@ -1,68 +1,101 @@
-import React, { StrictMode } from 'react'
+import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.jsx'
+import { App } from './App.jsx'
+import DashboardComponent from './DashboardComponent.jsx'
+import NewComponent from './NewComponent.jsx'
+import JSXBasics from './JSXBasics.jsx'
+import React from 'react';
 import LaptopFunction from './LaptopFunction.jsx'
 import UniversityClassComp from './UniversityClassComp.jsx'
 import StudentFunction from './StudentFunction.jsx'
-import CssInline from './cssinline.jsx'
 import CSSExternal from './CSSExternal.jsx'
-import Food from './food.jsx'
-//import TailwindExample from './TailwindExample.jsx'
-// import './Tailwindcss.css'
+import CSSInline from './CSSInline.jsx'
+import CSSModule from './CSSModule.jsx'
+import TailwindExample from './TailwindExample.jsx'
+import EventHandling from './EventHandling.jsx'
+import EventHandling1 from './EventHandling1.jsx'
+import LaptopComponent from './LaptopComponent.jsx'
 import UseStateExample from './UseStateExample.jsx'
-import UseStateExample2 from './UseStateExample2.jsx'
 import UseEffectExample from './UseEffectExample.jsx'
-import UseEffectExample2 from './UseEffectExample2.jsx'
+import WithoutUseContext from './UseContext/WithoutUseContext.jsx'
+import ProviderComp from './UseContext/ProviderComp.jsx'
+import ThemeProvider from './UseContext/ThemeProvider.jsx'
+import ParentComp from './UseCallback/ParentComp.jsx'
+import ParentTheme from './UseCallback/ParentTheme.jsx'
+import UseMemoExample from './UseMemo/UseMemoExample.jsx'
+import UseReducerExample from './UseReducerExample.jsx'
 import UseReducerExample1 from './UseReducerExample1.jsx'
-import HTTPRequestComp from './HTTPRequestComp.jsx'
-import HTTPExample from './HTTPExample.jsx'
-import HTTPRequestAxios from './HTTPRequestAxios.jsx'
+import UseRefExample1 from './UseRef/UseRefExample1.jsx'
+import UseRefExample2 from './UseRef/UseRefExample2.jsx'
+import ToggleState from './CustomHook/ToggleState.jsx'
+import ControlledComponent from './FormHandling/ControlledComponent.jsx'
+import ControlledComponent1 from './FormHandling/ControlledComponent1.jsx'
+import UncontrolledComponent from './FormHandling/UncontrolledComponent.jsx'
+import FormValidation from './FormHandling/FormValidation.jsx'
+import HTTPRequestComp from './HTTPMethods/HTTPRequestComp.jsx'
+import HTTPRequestAxios from './HTTPMethods/HTTPRequestAxios.jsx'
 import ParentRouting from './Routing/ParentRouting.jsx'
-export function Laptop() {
-  return (
-    <div>
-      <h3>This is the Laptop Component</h3>
-    </div>
+// import ParentRouting2 from './RoutingExample/ParentRouting2.jsx'
+
+import { Provider } from 'react-redux';
+// import {store} from './store.jsx';
+import {store1} from './store1.jsx'
+
+
+const firstElt = <h2>This is my new element</h2>
+
+function Laptop() {
+
+  return(
+    <div><h3>This is laptop function</h3></div>
   )
+  
 }
 
-export function Box() {
-  return (
+function Box(){
+  return(
     <div>
-      <h3>This is the box component</h3>
+      <h2>This is box component</h2>
+      <Laptop/>
       <Laptop />
+
     </div>
   )
 }
 
-export class University extends React.Component {
-  render() {
-    return (
+class University extends React.Component{
+
+  render(){
+    return(
       <div>
-        <h2>This is the University Component</h2>
+        <h1>This is university class component</h1>
       </div>
     )
   }
 }
 
-export class School extends React.Component {
-  render() {
-    return (
+class Student extends React.Component{
+  render(){
+    return(
       <div>
-        <h2>This is School Component</h2>
+        <h2>This is Student Class Component</h2>
+        <University />
         <University />
       </div>
     )
   }
 }
 
-// removed unused configuration and version variables (not required by the app)
 
+let modelno = 123;
+let config = {
+  ram : 16,
+  ssd : 512
+}
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-
-    <ParentRouting />
-  </StrictMode>
+  
+<Provider store={store1}>
+  <App/>
+</Provider>
 )
-

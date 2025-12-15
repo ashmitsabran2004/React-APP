@@ -1,12 +1,13 @@
-import React from 'react';
+import React from "react";
 
-class UniversityClassComp extends React.Component {
-    render() {
-        return (
+class UniversityClassComp extends React.Component{
+    render(){
+        return(
+
             <div>
-                <h2>The University name is {this.props.name}</h2>
+                <h3>the university name is {this.props.name}</h3>
             </div>
-        );
+        )
     }
 }
 
