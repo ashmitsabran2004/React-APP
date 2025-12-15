@@ -1,7 +1,7 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
 
 const initialState = {
-    todoitem : JSON.parse(localStorage .getItem("todolist")) ||    [{id:1, text: "Item1"}]
+    todoitem : JSON.parse(localStorage.getItem("todolist")) ||    [{id:1, text: "Item1"}]
 }
 
 export const TodoSlicer = createSlice({
@@ -17,7 +17,7 @@ export const TodoSlicer = createSlice({
             localStorage.setItem("todolist", JSON.stringify(state.todoitem))
         },
         deletetodo : (state,action) =>{
-            state.todoitem= state.todoitem.filter((u)=>u.id!=action.payload);
+            state.todoitem= state.todoitem.filter((u)=>u.id!==action.payload);
             localStorage.setItem("todolist", JSON.stringify(state.todoitem))
         }
     }
